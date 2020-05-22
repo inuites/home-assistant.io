@@ -18,7 +18,7 @@ bridge to connect the unit to your local network.
 There is an official iPhone and Android app to configure and control your unit. This platform connects with the help of
 the unofficial [pycomfoconnect](https://github.com/michaelarnauts/comfoconnect) library.
 
-The integration has a fan platform to view and control the ventilation speed, and a sensors platform to read out the outdoor temperature and humidity, the indoor temperature and humidity, and the extract and supply air flow (in m³ per hour).
+The integration has a fan platform to view and control the ventilation speed, the bypass state, ventilation profiles, ventilation modes, and a sensors platform to read out the outdoor temperature and humidity, the indoor temperature and humidity, and the extract and supply air flow (in m³ per hour).
 
 To set it up, add the following information to your `configuration.yaml` file:
 
@@ -77,6 +77,23 @@ sensor:
       - supply_fan_speed
       - supply_humidity
       - supply_temperature
+      - sensor_operating_mode_bis
+      - sensor_operating_mode
+      - sensor_fan_speed_mode
+      - sensor_fan_next_change
+      - sensor_power_current
+      - sensor_power_total_year
+      - sensor_preheater_power_total_year
+      - sensor_preheater_power_total
+      - sensor_preheater_power_current
+      - sensor_current_rmot
+      - sensor_avoided_heating_current
+      - sensor_avoided_heating_total_year
+      - sensor_avoided_heating_total
+      - sensor_avoided_cooling_current
+      - sensor_avoided_cooling_total_year
+      - sensor_avoided_cooling_total
+
 ```
 
 The list above indicates all supported sensors. It is recommended to only include the ones you need.
